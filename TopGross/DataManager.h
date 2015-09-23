@@ -7,12 +7,13 @@
 //
 
 @import Foundation;
+#import <AFNetworking/AFNetworking.h>
 
 typedef void (^DataManagerOperationResponseBlock)(id responseObject, NSError *error);
 
 @interface DataManager : NSObject
 
-- (DataManager *)sharedManager;
++ (DataManager *)sharedManager;
 - (void)fetchTopGrossingApplicationsWithCompletion:(DataManagerOperationResponseBlock)completion;
 
 @end

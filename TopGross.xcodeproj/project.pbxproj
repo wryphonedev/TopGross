@@ -24,6 +24,7 @@
 		6AF0A2CC1BB2F71100243FB3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2CA1BB2F71100243FB3 /* DataManager.m */; settings = {ASSET_TAGS = (); }; };
 		6AF0A2D31BB2F7C100243FB3 /* GrossingApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */; settings = {ASSET_TAGS = (); }; };
 		6AF0A2D41BB2F7C100243FB3 /* GrossingApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */; settings = {ASSET_TAGS = (); }; };
+		6AF4B5071BB326140045D5E8 /* GrossingAppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +65,15 @@
 		6AAFDCB11BB2EE3000AC56BA /* TopGrossUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopGrossUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAFDCB51BB2EE3000AC56BA /* TopGrossUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopGrossUITests.m; sourceTree = "<group>"; };
 		6AAFDCB71BB2EE3000AC56BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AF0A2C31BB2F58F00243FB3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		6AF0A2C31BB2F58F00243FB3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6AF0A2C51BB2F68800243FB3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		6AF0A2C61BB2F68800243FB3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		6AF0A2C91BB2F71100243FB3 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		6AF0A2CA1BB2F71100243FB3 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		6AF0A2D11BB2F7C100243FB3 /* GrossingApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrossingApplication.h; sourceTree = "<group>"; };
 		6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrossingApplication.m; sourceTree = "<group>"; };
+		6AF4B5051BB326140045D5E8 /* GrossingAppTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrossingAppTableViewCell.h; sourceTree = "<group>"; };
+		6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrossingAppTableViewCell.m; sourceTree = "<group>"; };
 		AF5481692D496158568F32D6 /* Pods-TopGross.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopGross.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopGross/Pods-TopGross.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,8 @@
 				6AAFDC941BB2EE3000AC56BA /* MasterViewController.m */,
 				6AAFDC961BB2EE3000AC56BA /* DetailViewController.h */,
 				6AAFDC971BB2EE3000AC56BA /* DetailViewController.m */,
+				6AF4B5051BB326140045D5E8 /* GrossingAppTableViewCell.h */,
+				6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */,
 				6AAFDC991BB2EE3000AC56BA /* Main.storyboard */,
 				6AAFDC9C1BB2EE3000AC56BA /* Assets.xcassets */,
 				6AAFDC9E1BB2EE3000AC56BA /* LaunchScreen.storyboard */,
@@ -361,6 +366,7 @@
 				6AAFDC921BB2EE3000AC56BA /* AppDelegate.m in Sources */,
 				6AAFDC951BB2EE3000AC56BA /* MasterViewController.m in Sources */,
 				6AAFDC8F1BB2EE3000AC56BA /* main.m in Sources */,
+				6AF4B5071BB326140045D5E8 /* GrossingAppTableViewCell.m in Sources */,
 				6AF0A2D31BB2F7C100243FB3 /* GrossingApplication.m in Sources */,
 				6AAFDC981BB2EE3000AC56BA /* DetailViewController.m in Sources */,
 			);
