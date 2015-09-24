@@ -16,6 +16,12 @@
 NSString *const GrossingAppCellIdentifier = @"GrossingAppCell";
 NSString *const DetailSegueIdentifier = @"DetailSegue";
 
+typedef NS_ENUM(NSInteger, MasterListRecordSource) {
+    
+    MasterListRecordSourceAppleiTunesAPI,
+    MasterListRecordSourceUserSaved
+};
+
 @interface MasterViewController ()
 
 @property (nonatomic, strong) NSArray *objects;

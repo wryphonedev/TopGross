@@ -11,12 +11,6 @@
 
 @class DetailViewController;
 
-typedef NS_ENUM(NSInteger, MasterListRecordSource) {
-    
-    MasterListRecordSourceAppleiTunesAPI,
-    MasterListRecordSourceUserSaved
-};
-
 @interface MasterViewController : UITableViewController
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
