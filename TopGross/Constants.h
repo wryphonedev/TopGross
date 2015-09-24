@@ -9,4 +9,4 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const TGREndpointURL;
-
+extern NSString *const TGRPersistedDataFileName;

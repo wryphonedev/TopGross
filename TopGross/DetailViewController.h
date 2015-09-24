@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class GrossingApplication;
+@class GrossingApplicationRecord;
 
 @interface DetailViewController : UIViewController
 
-@property (nonatomic, strong) GrossingApplication *grossingApplication;
+@property (nonatomic, strong) GrossingApplicationRecord *grossingApplication;
 
 @end
 

@@ -9,5 +9,5 @@
 #import "Constants.h"
 
 NSString *const TGREndpointURL = @"https://itunes.apple.com/";
-
+NSString *const TGRPersistedDataFileName = @"TopGrossing.data";
 

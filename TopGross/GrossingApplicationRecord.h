@@ -8,7 +8,7 @@
 
 #import <Mantle/Mantle.h>
 
-@interface GrossingApplication : MTLModel <MTLJSONSerializing>
+@interface GrossingApplicationRecord : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy) NSString *appName;
 @property (nonatomic, copy) NSURL *thumbnailImageURL;

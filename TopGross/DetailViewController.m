@@ -7,10 +7,11 @@
 //
 
 #import "DetailViewController.h"
-#import "GrossingApplication.h"
+#import "GrossingApplicationRecord.h"
 #import <PINRemoteImage/UIImageView+PINRemoteImage.h>
 #import "FormattingUtility.h"
 #import <TFGRelativeDateFormatter/TFGRelativeDateFormatter.h>
+#import "DataManager.h"
 
 @interface DetailViewController ()
 
@@ -20,6 +21,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
 @property (nonatomic, weak) IBOutlet UITextView *descriptionTextView;
+@property (nonatomic, weak) IBOutlet UIButton *saveButton;
 
 - (void)populateContent;
 - (void)didPressShareButton:(id)sender;
@@ -35,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupNavigation];
     [self populateContent];
 }
 
@@ -46,12 +49,13 @@
 
 #pragma mark - Properties
 
-- (void)setGrossingApplication:(GrossingApplication *)newGrossingApplication
+- (void)setGrossingApplication:(GrossingApplicationRecord *)newGrossingApplication
 {
     if (_grossingApplication != newGrossingApplication)
     {
         _grossingApplication = newGrossingApplication;
         [self populateContent];
+        [[self saveButton] setEnabled:YES];
     }
 }
 
@@ -61,7 +65,7 @@
 {
     if ([self grossingApplication])
     {
-        GrossingApplication *app = [self grossingApplication];
+        GrossingApplicationRecord *app = [self grossingApplication];
         NSString *title = [app appName];
         [[self navigationItem] setTitle:title];
         [[self appNameLabel] setText:title];
@@ -89,17 +93,37 @@
 
 - (void)didPressShareButton:(id)sender
 {
-    
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[[self grossingAppSummaryForExport]]
+                                                                                     applicationActivities:nil];
+    [self presentViewController:activityController animated:YES completion:nil];
 }
 
 - (IBAction)didPressSaveButton:(id)sender
 {
-    
+    if ([self grossingApplication])
+    {
+        [[DataManager sharedManager] persistGrossingApplicationRecord:[self grossingApplication]];
+        [[self saveButton] setTitle:@"Saved!" forState:UIControlStateDisabled];
+        [[self saveButton] setEnabled:NO];
+    }
 }
 
 - (IBAction)didPressViewInAppStoreButton:(id)sender
 {
-    
+    if ([self grossingApplication])
+    {
+        // TODO: Not sure why it isn't taking this url. Most likely an https thing.
+      [[UIApplication sharedApplication] openURL:[[[self grossingApplication] purchaseURL] absoluteURL]];
+    }
+}
+
+#pragma mark - Sharing
+
+- (NSString *)grossingAppSummaryForExport
+{
+    GrossingApplicationRecord *app = [self grossingApplication];
+    NSString *exportString = [NSString stringWithFormat:@"%@\n%@", [app appName], [app purchaseURL]];
+    return exportString;
 }
 
 @end

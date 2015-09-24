@@ -6,10 +6,10 @@
 //  Copyright © 2015 Isaac Schmidt. All rights reserved.
 //
 
-#import "GrossingApplication.h"
+#import "GrossingApplicationRecord.h"
 #import "FormattingUtility.h"
 
-@implementation GrossingApplication
+@implementation GrossingApplicationRecord
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
@@ -29,7 +29,7 @@
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
         
         // 1 is the index of the medium-sized image returned by Apple.
-        return [GrossingApplication URLStringForImageAtIndex:1 fromValueArray:value];
+        return [GrossingApplicationRecord URLStringForImageAtIndex:1 fromValueArray:value];
     }];
 }
 
@@ -38,7 +38,7 @@
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
         
         // 2 is the index of the largest image returned by Apple
-        return [GrossingApplication URLStringForImageAtIndex:2 fromValueArray:value];
+        return [GrossingApplicationRecord URLStringForImageAtIndex:2 fromValueArray:value];
     }];
 }
 
@@ -63,8 +63,8 @@
 {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
        
-        return [NSURL URLWithString:value];
-        
+        NSURL *url = [NSURL URLWithString:value];
+        return url;
     }];
 }
 

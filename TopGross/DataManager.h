@@ -9,11 +9,15 @@
 @import Foundation;
 #import <AFNetworking/AFNetworking.h>
 
+@class GrossingApplicationRecord;
+
 typedef void (^DataManagerOperationResponseBlock)(id responseObject, NSError *error);
 
 @interface DataManager : NSObject
 
 + (DataManager *)sharedManager;
 - (void)fetchTopGrossingApplicationsWithCompletion:(DataManagerOperationResponseBlock)completion;
+- (NSArray *)persistedGrossingApplicationRecords;
+- (void)persistGrossingApplicationRecord:(GrossingApplicationRecord *)grossingApp;
 
 @end

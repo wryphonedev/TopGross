@@ -8,13 +8,15 @@
 
 #import "DataManager.h"
 #import "Constants.h"
-#import "GrossingApplication.h"
+#import "GrossingApplicationRecord.h"
 #import <Mantle/Mantle.h>
-//#import <ObjectiveSugar/ObjectiveSugar.h>
+#import "NSFileManager+Additions.h"
 
 @interface DataManager ()
 
 @property (nonatomic, strong) AFHTTPRequestOperationManager *operationManager;
+
+- (NSString *)persistedDataFilePath;
 
 @end
 
@@ -53,19 +55,52 @@
                              NSError *parseError;
                              NSArray *results = [[responseObject objectForKey:@"feed"] objectForKey:@"entry"];
                              
-                             NSArray *parsedResults = [MTLJSONAdapter modelsOfClass:[GrossingApplication class] fromJSONArray:results error:&parseError];
+                             NSArray *parsedResults = [MTLJSONAdapter modelsOfClass:[GrossingApplicationRecord class] fromJSONArray:results error:&parseError];
                              if (completion && !parseError) {
+                                 
                                  completion(parsedResults, nil);
-                             } else if (parseError)
-                             {
+                                 
+                             } else if (parseError) {
+                                 
                                  completion(nil, parseError);
                              }
                              
                          } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
                              
-                             
-                             
+                             if (completion)
+                             {
+                                 completion(nil, error);
+                             }
                          }];
+}
+
+- (NSString *)persistedDataFilePath
+{
+    return [NSString stringWithFormat:@"%@%@", [NSFileManager documentDirectoryPath], TGRPersistedDataFileName];
+}
+
+- (NSArray *)persistedGrossingApplicationRecords
+{
+    NSArray *persistedRecords = [NSKeyedUnarchiver unarchiveObjectWithFile:[self persistedDataFilePath]];
+    if (!persistedRecords)
+    {
+        persistedRecords = [NSArray array];
+    }
+    
+    return persistedRecords;
+}
+
+- (void)persistGrossingApplicationRecord:(GrossingApplicationRecord *)grossingApp
+{
+    NSArray *previouslyPersisted = [NSKeyedUnarchiver unarchiveObjectWithFile:[self persistedDataFilePath]];
+    if (!previouslyPersisted)
+    {
+        previouslyPersisted = [NSArray array];
+    }
+    NSMutableArray *newPersisted = [previouslyPersisted mutableCopy];
+    [newPersisted addObject:grossingApp];
+    [NSKeyedArchiver archiveRootObject:[NSArray arrayWithArray:newPersisted] toFile:[self persistedDataFilePath]];
+    
 }
 
 @end

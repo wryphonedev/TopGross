@@ -10,6 +10,8 @@
 		4A3E75E7488C72A64123410C /* libPods-TopGross.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 307314AF47B8561F22C9B23C /* libPods-TopGross.a */; };
 		6A2426021BB3883000D2F0CB /* FormattingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2426011BB3883000D2F0CB /* FormattingUtility.m */; settings = {ASSET_TAGS = (); }; };
 		6A2426031BB3883000D2F0CB /* FormattingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2426011BB3883000D2F0CB /* FormattingUtility.m */; settings = {ASSET_TAGS = (); }; };
+		6A24260A1BB394BE00D2F0CB /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2426081BB394BE00D2F0CB /* NSFileManager+Additions.m */; settings = {ASSET_TAGS = (); }; };
+		6A24260B1BB394BE00D2F0CB /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2426081BB394BE00D2F0CB /* NSFileManager+Additions.m */; settings = {ASSET_TAGS = (); }; };
 		6AAFDC8F1BB2EE3000AC56BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFDC8E1BB2EE3000AC56BA /* main.m */; };
 		6AAFDC921BB2EE3000AC56BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFDC911BB2EE3000AC56BA /* AppDelegate.m */; };
 		6AAFDC951BB2EE3000AC56BA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFDC941BB2EE3000AC56BA /* MasterViewController.m */; };
@@ -24,8 +26,8 @@
 		6AF0A2C81BB2F68800243FB3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2C61BB2F68800243FB3 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		6AF0A2CB1BB2F71100243FB3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2CA1BB2F71100243FB3 /* DataManager.m */; settings = {ASSET_TAGS = (); }; };
 		6AF0A2CC1BB2F71100243FB3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2CA1BB2F71100243FB3 /* DataManager.m */; settings = {ASSET_TAGS = (); }; };
-		6AF0A2D31BB2F7C100243FB3 /* GrossingApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */; settings = {ASSET_TAGS = (); }; };
-		6AF0A2D41BB2F7C100243FB3 /* GrossingApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */; settings = {ASSET_TAGS = (); }; };
+		6AF0A2D31BB2F7C100243FB3 /* GrossingApplicationRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2D21BB2F7C100243FB3 /* GrossingApplicationRecord.m */; settings = {ASSET_TAGS = (); }; };
+		6AF0A2D41BB2F7C100243FB3 /* GrossingApplicationRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A2D21BB2F7C100243FB3 /* GrossingApplicationRecord.m */; settings = {ASSET_TAGS = (); }; };
 		6AF4B5071BB326140045D5E8 /* GrossingAppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		307314AF47B8561F22C9B23C /* libPods-TopGross.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TopGross.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2426001BB3883000D2F0CB /* FormattingUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormattingUtility.h; sourceTree = "<group>"; };
 		6A2426011BB3883000D2F0CB /* FormattingUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormattingUtility.m; sourceTree = "<group>"; };
+		6A2426081BB394BE00D2F0CB /* NSFileManager+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Additions.m"; sourceTree = "<group>"; };
+		6A2426091BB394BE00D2F0CB /* NSFileManager+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Additions.h"; sourceTree = "<group>"; };
 		6AAFDC8A1BB2EE3000AC56BA /* TopGross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopGross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAFDC8E1BB2EE3000AC56BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AAFDC901BB2EE3000AC56BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,8 +78,8 @@
 		6AF0A2C61BB2F68800243FB3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		6AF0A2C91BB2F71100243FB3 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		6AF0A2CA1BB2F71100243FB3 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		6AF0A2D11BB2F7C100243FB3 /* GrossingApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrossingApplication.h; sourceTree = "<group>"; };
-		6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrossingApplication.m; sourceTree = "<group>"; };
+		6AF0A2D11BB2F7C100243FB3 /* GrossingApplicationRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrossingApplicationRecord.h; sourceTree = "<group>"; };
+		6AF0A2D21BB2F7C100243FB3 /* GrossingApplicationRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrossingApplicationRecord.m; sourceTree = "<group>"; };
 		6AF4B5051BB326140045D5E8 /* GrossingAppTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrossingAppTableViewCell.h; sourceTree = "<group>"; };
 		6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrossingAppTableViewCell.m; sourceTree = "<group>"; };
 		AF5481692D496158568F32D6 /* Pods-TopGross.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopGross.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopGross/Pods-TopGross.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,10 +141,12 @@
 				6AF0A2C61BB2F68800243FB3 /* Constants.m */,
 				6AF0A2C91BB2F71100243FB3 /* DataManager.h */,
 				6AF0A2CA1BB2F71100243FB3 /* DataManager.m */,
+				6A2426091BB394BE00D2F0CB /* NSFileManager+Additions.h */,
+				6A2426081BB394BE00D2F0CB /* NSFileManager+Additions.m */,
 				6A2426001BB3883000D2F0CB /* FormattingUtility.h */,
 				6A2426011BB3883000D2F0CB /* FormattingUtility.m */,
-				6AF0A2D11BB2F7C100243FB3 /* GrossingApplication.h */,
-				6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */,
+				6AF0A2D11BB2F7C100243FB3 /* GrossingApplicationRecord.h */,
+				6AF0A2D21BB2F7C100243FB3 /* GrossingApplicationRecord.m */,
 				6AAFDC901BB2EE3000AC56BA /* AppDelegate.h */,
 				6AAFDC911BB2EE3000AC56BA /* AppDelegate.m */,
 				6AAFDC931BB2EE3000AC56BA /* MasterViewController.h */,
@@ -373,8 +379,9 @@
 				6A2426021BB3883000D2F0CB /* FormattingUtility.m in Sources */,
 				6AAFDC951BB2EE3000AC56BA /* MasterViewController.m in Sources */,
 				6AAFDC8F1BB2EE3000AC56BA /* main.m in Sources */,
+				6A24260A1BB394BE00D2F0CB /* NSFileManager+Additions.m in Sources */,
 				6AF4B5071BB326140045D5E8 /* GrossingAppTableViewCell.m in Sources */,
-				6AF0A2D31BB2F7C100243FB3 /* GrossingApplication.m in Sources */,
+				6AF0A2D31BB2F7C100243FB3 /* GrossingApplicationRecord.m in Sources */,
 				6AAFDC981BB2EE3000AC56BA /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,10 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AF0A2D41BB2F7C100243FB3 /* GrossingApplication.m in Sources */,
+				6AF0A2D41BB2F7C100243FB3 /* GrossingApplicationRecord.m in Sources */,
 				6AAFDCAB1BB2EE3000AC56BA /* TopGrossTests.m in Sources */,
 				6AF0A2CC1BB2F71100243FB3 /* DataManager.m in Sources */,
 				6AF0A2C81BB2F68800243FB3 /* Constants.m in Sources */,
+				6A24260B1BB394BE00D2F0CB /* NSFileManager+Additions.m in Sources */,
 				6A2426031BB3883000D2F0CB /* FormattingUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
