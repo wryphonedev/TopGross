@@ -14,18 +14,22 @@
 #import <PINRemoteImage/UIImageView+PINRemoteImage.h>
 
 NSString *const GrossingAppCellIdentifier = @"GrossingAppCell";
+NSString *const DetailSegueIdentifier = @"DetailSegue";
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property (nonatomic, strong) NSArray *objects;
 
 @end
 
 @implementation MasterViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
+    [[self tableView] setRowHeight:UITableViewAutomaticDimension];
+    [[self tableView] setEstimatedRowHeight:100.00];
     
     [[DataManager sharedManager] fetchTopGrossingApplicationsWithCompletion:^(id responseObject, NSError *error) {
         
@@ -33,7 +37,6 @@ NSString *const GrossingAppCellIdentifier = @"GrossingAppCell";
         [[self tableView] reloadData];
     }];
     
-
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -47,11 +50,12 @@ NSString *const GrossingAppCellIdentifier = @"GrossingAppCell";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:DetailSegueIdentifier])
+    {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        GrossingApplication *selectedApp = [[self objects] objectAtIndex:[indexPath row]];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setGrossingApplication:selectedApp];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -76,7 +80,6 @@ NSString *const GrossingAppCellIdentifier = @"GrossingAppCell";
     [self configureCell:cell forGrossingApp:app];
     return cell;
 }
-
 
 - (void)configureCell:(GrossingAppTableViewCell *)cell forGrossingApp:(GrossingApplication *)app
 {

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class GrossingApplication;
+
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, strong) GrossingApplication *grossingApplication;
 
 @end
 

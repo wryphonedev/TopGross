@@ -18,7 +18,7 @@
              @"appDescription": @"summary.label",
              @"purchaseURL" : @"link.attributes.href",
              @"displayPrice": @"im:price.attributes.amount",
-             @"publisher": @"artist.label",
+             @"publisher": @"im:artist.label",
              @"releaseDate" : @"im:releaseDate.label"
              };
 

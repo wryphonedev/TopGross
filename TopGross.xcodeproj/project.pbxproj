@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A3E75E7488C72A64123410C /* libPods-TopGross.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 307314AF47B8561F22C9B23C /* libPods-TopGross.a */; };
+		6A2426021BB3883000D2F0CB /* FormattingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2426011BB3883000D2F0CB /* FormattingUtility.m */; settings = {ASSET_TAGS = (); }; };
+		6A2426031BB3883000D2F0CB /* FormattingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2426011BB3883000D2F0CB /* FormattingUtility.m */; settings = {ASSET_TAGS = (); }; };
 		6AAFDC8F1BB2EE3000AC56BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFDC8E1BB2EE3000AC56BA /* main.m */; };
 		6AAFDC921BB2EE3000AC56BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFDC911BB2EE3000AC56BA /* AppDelegate.m */; };
 		6AAFDC951BB2EE3000AC56BA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAFDC941BB2EE3000AC56BA /* MasterViewController.m */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		1EAEBB03F1F76DB9496C4165 /* Pods-TopGross.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopGross.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopGross/Pods-TopGross.debug.xcconfig"; sourceTree = "<group>"; };
 		307314AF47B8561F22C9B23C /* libPods-TopGross.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TopGross.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2426001BB3883000D2F0CB /* FormattingUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormattingUtility.h; sourceTree = "<group>"; };
+		6A2426011BB3883000D2F0CB /* FormattingUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormattingUtility.m; sourceTree = "<group>"; };
 		6AAFDC8A1BB2EE3000AC56BA /* TopGross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopGross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAFDC8E1BB2EE3000AC56BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AAFDC901BB2EE3000AC56BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				6AF0A2C61BB2F68800243FB3 /* Constants.m */,
 				6AF0A2C91BB2F71100243FB3 /* DataManager.h */,
 				6AF0A2CA1BB2F71100243FB3 /* DataManager.m */,
+				6A2426001BB3883000D2F0CB /* FormattingUtility.h */,
+				6A2426011BB3883000D2F0CB /* FormattingUtility.m */,
 				6AF0A2D11BB2F7C100243FB3 /* GrossingApplication.h */,
 				6AF0A2D21BB2F7C100243FB3 /* GrossingApplication.m */,
 				6AAFDC901BB2EE3000AC56BA /* AppDelegate.h */,
@@ -364,6 +370,7 @@
 				6AF0A2C71BB2F68800243FB3 /* Constants.m in Sources */,
 				6AF0A2CB1BB2F71100243FB3 /* DataManager.m in Sources */,
 				6AAFDC921BB2EE3000AC56BA /* AppDelegate.m in Sources */,
+				6A2426021BB3883000D2F0CB /* FormattingUtility.m in Sources */,
 				6AAFDC951BB2EE3000AC56BA /* MasterViewController.m in Sources */,
 				6AAFDC8F1BB2EE3000AC56BA /* main.m in Sources */,
 				6AF4B5071BB326140045D5E8 /* GrossingAppTableViewCell.m in Sources */,
@@ -380,6 +387,7 @@
 				6AAFDCAB1BB2EE3000AC56BA /* TopGrossTests.m in Sources */,
 				6AF0A2CC1BB2F71100243FB3 /* DataManager.m in Sources */,
 				6AF0A2C81BB2F68800243FB3 /* Constants.m in Sources */,
+				6A2426031BB3883000D2F0CB /* FormattingUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

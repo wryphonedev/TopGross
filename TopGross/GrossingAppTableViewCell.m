@@ -10,4 +10,11 @@
 
 @implementation GrossingAppTableViewCell
 
+- (void)prepareForReuse
+{
+    [[self thumbnailImageView] setImage:nil];
+    [[self titleLabel] setText:nil];
+    [[self descriptionField] setText:nil];
+}
+
 @end
