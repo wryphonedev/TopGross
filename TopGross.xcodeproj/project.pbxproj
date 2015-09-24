@@ -111,6 +111,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A24260C1BB3A35A00D2F0CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6AAFDC991BB2EE3000AC56BA /* Main.storyboard */,
+				6AAFDC9C1BB2EE3000AC56BA /* Assets.xcassets */,
+				6AAFDC9E1BB2EE3000AC56BA /* LaunchScreen.storyboard */,
+				6AAFDCA11BB2EE3000AC56BA /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6A24260D1BB3A36500D2F0CB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6A2426091BB394BE00D2F0CB /* NSFileManager+Additions.h */,
+				6A2426081BB394BE00D2F0CB /* NSFileManager+Additions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		6A24260E1BB3A37C00D2F0CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AF0A2D11BB2F7C100243FB3 /* GrossingApplicationRecord.h */,
+				6AF0A2D21BB2F7C100243FB3 /* GrossingApplicationRecord.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6A24260F1BB3A38B00D2F0CB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6AAFDC931BB2EE3000AC56BA /* MasterViewController.h */,
+				6AAFDC941BB2EE3000AC56BA /* MasterViewController.m */,
+				6AAFDC961BB2EE3000AC56BA /* DetailViewController.h */,
+				6AAFDC971BB2EE3000AC56BA /* DetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6A2426101BB3A39400D2F0CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AF4B5051BB326140045D5E8 /* GrossingAppTableViewCell.h */,
+				6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6A2426111BB3A3B300D2F0CB /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				6AF0A2C91BB2F71100243FB3 /* DataManager.h */,
+				6AF0A2CA1BB2F71100243FB3 /* DataManager.m */,
+				6A2426001BB3883000D2F0CB /* FormattingUtility.h */,
+				6A2426011BB3883000D2F0CB /* FormattingUtility.m */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
 		6AAFDC811BB2EE2F00AC56BA = {
 			isa = PBXGroup;
 			children = (
@@ -137,28 +197,16 @@
 			isa = PBXGroup;
 			children = (
 				6AF0A2C31BB2F58F00243FB3 /* Podfile */,
-				6AF0A2C51BB2F68800243FB3 /* Constants.h */,
-				6AF0A2C61BB2F68800243FB3 /* Constants.m */,
-				6AF0A2C91BB2F71100243FB3 /* DataManager.h */,
-				6AF0A2CA1BB2F71100243FB3 /* DataManager.m */,
-				6A2426091BB394BE00D2F0CB /* NSFileManager+Additions.h */,
-				6A2426081BB394BE00D2F0CB /* NSFileManager+Additions.m */,
-				6A2426001BB3883000D2F0CB /* FormattingUtility.h */,
-				6A2426011BB3883000D2F0CB /* FormattingUtility.m */,
-				6AF0A2D11BB2F7C100243FB3 /* GrossingApplicationRecord.h */,
-				6AF0A2D21BB2F7C100243FB3 /* GrossingApplicationRecord.m */,
 				6AAFDC901BB2EE3000AC56BA /* AppDelegate.h */,
 				6AAFDC911BB2EE3000AC56BA /* AppDelegate.m */,
-				6AAFDC931BB2EE3000AC56BA /* MasterViewController.h */,
-				6AAFDC941BB2EE3000AC56BA /* MasterViewController.m */,
-				6AAFDC961BB2EE3000AC56BA /* DetailViewController.h */,
-				6AAFDC971BB2EE3000AC56BA /* DetailViewController.m */,
-				6AF4B5051BB326140045D5E8 /* GrossingAppTableViewCell.h */,
-				6AF4B5061BB326140045D5E8 /* GrossingAppTableViewCell.m */,
-				6AAFDC991BB2EE3000AC56BA /* Main.storyboard */,
-				6AAFDC9C1BB2EE3000AC56BA /* Assets.xcassets */,
-				6AAFDC9E1BB2EE3000AC56BA /* LaunchScreen.storyboard */,
-				6AAFDCA11BB2EE3000AC56BA /* Info.plist */,
+				6AF0A2C51BB2F68800243FB3 /* Constants.h */,
+				6AF0A2C61BB2F68800243FB3 /* Constants.m */,
+				6A24260C1BB3A35A00D2F0CB /* Resources */,
+				6A24260D1BB3A36500D2F0CB /* Categories */,
+				6A2426111BB3A3B300D2F0CB /* Session */,
+				6A24260E1BB3A37C00D2F0CB /* Model */,
+				6A2426101BB3A39400D2F0CB /* Views */,
+				6A24260F1BB3A38B00D2F0CB /* View Controllers */,
 				6AAFDC8D1BB2EE3000AC56BA /* Supporting Files */,
 			);
 			path = TopGross;

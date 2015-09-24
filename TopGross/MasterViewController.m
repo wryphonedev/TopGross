@@ -26,6 +26,8 @@ NSString *const DetailSegueIdentifier = @"DetailSegue";
 
 @implementation MasterViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -58,6 +60,8 @@ NSString *const DetailSegueIdentifier = @"DetailSegue";
     [[self navigationItem] setTitle:@"Top Grossing Apps"];
 }
 
+#pragma mark - Mechanics
+
 - (void)loadData
 {
     if (self.recordSource == MasterListRecordSourceAppleiTunesAPI)
@@ -67,9 +71,16 @@ NSString *const DetailSegueIdentifier = @"DetailSegue";
            
             if (weakSelf)
             {
-                MasterViewController *strongSelf = weakSelf;
-                [strongSelf setObjects:responseObject];
-                [[strongSelf tableView] reloadData];
+                 MasterViewController *strongSelf = weakSelf;
+                if (!error)
+                {
+                    [strongSelf setObjects:responseObject];
+                    [[strongSelf tableView] reloadData];
+                }
+                else
+                {
+                    [strongSelf handleLoadingError:error];
+                }
             }
         }];
     }
@@ -79,6 +90,21 @@ NSString *const DetailSegueIdentifier = @"DetailSegue";
         [self setObjects:saved];
         [[self tableView] reloadData];
     }
+}
+
+- (void)handleLoadingError:(NSError *)error
+{
+    UIAlertController *alertController = [[UIAlertController alloc] init];
+    [alertController setTitle:@"Error Loading Content"];
+    [alertController setMessage:[error localizedDescription]];
+    __weak MasterViewController *weakSelf = self;
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - Segues
