@@ -12,7 +12,8 @@
 
 @interface FormattingUtility : NSObject
 
-@property (nonatomic, strong) TFGRelativeDateFormatter *dateFormatter;
+@property (nonatomic, strong) NSDateFormatter *JSONDateFormatter;
+@property (nonatomic, strong) TFGRelativeDateFormatter *relativeDateFormatter;
 @property (nonatomic, strong) NSNumberFormatter *priceFormatter;
 
 + (FormattingUtility *)sharedUtility;

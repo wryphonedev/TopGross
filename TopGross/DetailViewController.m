@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "GrossingApplication.h"
 #import <PINRemoteImage/UIImageView+PINRemoteImage.h>
+#import "FormattingUtility.h"
+#import <TFGRelativeDateFormatter/TFGRelativeDateFormatter.h>
 
 @interface DetailViewController ()
 
@@ -66,6 +68,20 @@
         [[self publisherLabel] setText:[app publisher]];
         [[self descriptionTextView] setText:[app appDescription]];
         [[self appIconImageView] pin_setImageFromURL:[app fullSizeImageURL]];
+        
+        NSString *dateString = [[[FormattingUtility sharedUtility] relativeDateFormatter] stringForDate:[app releaseDate]];
+        [[self dateLabel] setText:dateString];
+
+        double priceDouble = [[app displayPrice] doubleValue];
+        if (priceDouble == 0)
+        {
+            [[self priceLabel] setText:@"Free"];
+        }
+        else
+        {
+            NSString *priceString = [[[FormattingUtility sharedUtility] priceFormatter] stringFromNumber:[NSNumber numberWithDouble:priceDouble]];
+            [[self priceLabel] setText:priceString];
+        }
     }
 }
 
@@ -76,10 +92,14 @@
     
 }
 
-- (void)didPressSaveButton:(id)sender
+- (IBAction)didPressSaveButton:(id)sender
 {
     
 }
 
+- (IBAction)didPressViewInAppStoreButton:(id)sender
+{
+    
+}
 
 @end

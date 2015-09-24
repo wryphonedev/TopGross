@@ -7,6 +7,7 @@
 //
 
 #import "GrossingApplication.h"
+#import "FormattingUtility.h"
 
 @implementation GrossingApplication
 
@@ -21,14 +22,13 @@
              @"publisher": @"im:artist.label",
              @"releaseDate" : @"im:releaseDate.label"
              };
-
 }
 
 + (NSValueTransformer *)thumbnailImageURLJSONTransformer
 {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
         
-        // 1 is the index of the medium-sized image returned by Apple
+        // 1 is the index of the medium-sized image returned by Apple.
         return [GrossingApplication URLStringForImageAtIndex:1 fromValueArray:value];
     }];
 }
@@ -64,6 +64,16 @@
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
        
         return [NSURL URLWithString:value];
+        
+    }];
+}
+
++ (NSValueTransformer *)releaseDateJSONTransformer
+{
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+        
+        NSDate *date = [[[FormattingUtility sharedUtility] JSONDateFormatter] dateFromString:value];
+        return date;
         
     }];
 }

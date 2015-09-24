@@ -17,6 +17,6 @@
 @property (nonatomic, copy) NSURL *purchaseURL;
 @property (nonatomic, copy) NSString *displayPrice;
 @property (nonatomic, copy) NSString *publisher;
-@property (nonatomic, copy) NSString *releaseDate;
+@property (nonatomic, copy) NSDate *releaseDate;
 
 @end
